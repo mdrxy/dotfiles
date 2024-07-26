@@ -1,0 +1,195 @@
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "twilio/brew"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Parser generator
+brew "bison"
+# Library for command-line editing
+brew "readline"
+# Command-line interface for SQLite
+brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Open source suite of directory software
+brew "openldap"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Tool for managing dock items
+brew "dockutil"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
+brew "sdl2"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# GNU database manager
+brew "gdbm"
+# Distributed revision control system
+brew "git"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Portable Foreign Function Interface library
+brew "libffi"
+# YAML Parser
+brew "libyaml"
+# Mac App Store command-line interface
+brew "mas"
+# General-purpose lossless data-compression library
+brew "zlib"
+# Open source relational database management system
+brew "mysql"
+# Free (GNU) replacement for the Pico text editor
+brew "nano"
+# Platform built on V8 to build network applications
+brew "node"
+# Package for scientific computing with Python
+brew "numpy"
+# Information gathering framework for phone numbers
+brew "phoneinfoga"
+# General-purpose scripting language
+brew "php"
+# Python version management
+brew "pyenv"
+# Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv"
+# Core utilities for Python packages
+brew "python-packaging"
+# Tool Command Language
+brew "tcl-tk"
+# Python interface to Tcl/Tk
+brew "python-tk@3.12"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
+# Safe, concurrent, practical language
+brew "rust"
+# Library for loading images as SDL surfaces and textures
+brew "sdl2_image"
+# Library for using TrueType fonts in SDL applications
+brew "sdl2_ttf"
+# Hunt down social media accounts by username
+brew "sherlock"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
+# Internet file retriever
+brew "wget"
+# Utilities to create and convert Web Open Font File (WOFF) files
+brew "woff2"
+# UNIX shell (command interpreter)
+brew "zsh"
+# unleash the power of Twilio from your command prompt
+brew "twilio/brew/twilio"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Collection of apps and services for photography, design, video, web, and UX
+cask "adobe-creative-cloud"
+# Application launcher and productivity software
+cask "alfred"
+# Data backup and storage service
+cask "backblaze"
+# Downloads videos from different websites
+cask "downie"
+# Web browser
+cask "firefox"
+# Desktop client for GitHub repositories
+cask "github"
+# Web browser
+cask "google-chrome"
+# Open-source video transcoder
+cask "handbrake"
+# Automated organisation
+cask "hazel"
+# Free and open-source media player
+cask "iina"
+# Manage your Google Drive and OneDrive files
+cask "insync"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Enable generative AI features in iTerm2
+cask "itermai"
+# File archiver
+cask "keka"
+# Software for Logitech devices
+cask "logi-options-plus"
+# Media key forwarder for iTunes and Spotify
+cask "macmediakeyforwarder"
+# Bridges Proton Mail to email clients supporting IMAP and SMTP protocols
+cask "protonmail-bridge"
+# VPN client focusing on security
+cask "protonvpn"
+# Quick Look generator for Markdown files
+cask "qlmarkdown"
+# Quick Look plugin for plaintext files without an extension
+cask "qlstephen"
+# Quick Look plugin for CSV files
+cask "quicklook-csv"
+# Quick Look plugin for JSON files
+cask "quicklook-json"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Team communication and collaboration software
+cask "slack"
+# Unpacks archive files
+cask "the-unarchiver"
+# Open-source BitTorrent client
+cask "transmission"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+# Quick Look plugin for webp files
+cask "webpquicklook"
+mas "Okta Verify", id: 490179405
+mas "Pure Paste", id: 1611378436
+mas "Scrobbles for Last.fm", id: 1344679160
+mas "UTC Time", id: 1538245904
+vscode "1password.op-vscode"
+vscode "astro-build.astro-vscode"
+vscode "bierner.markdown-preview-github-styles"
+vscode "davidanson.vscode-markdownlint"
+vscode "ecmel.vscode-html-css"
+vscode "esbenp.prettier-vscode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.vscode-pull-request-github"
+vscode "jinhyuk.replace-curly-quotes"
+vscode "kevinrose.vsc-python-indent"
+vscode "mechatroner.rainbow-csv"
+vscode "moshfeu.compare-folders"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.remote-explorer"
+vscode "redhat.java"
+vscode "techer.open-in-browser"
+vscode "tomoki1207.pdf"
+vscode "twxs.cmake"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
+vscode "vue.volar"
+vscode "yzhang.markdown-all-in-one"

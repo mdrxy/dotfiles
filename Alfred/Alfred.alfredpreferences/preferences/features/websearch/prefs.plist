@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>0261C97A-E0EB-4FF9-A063-243BA15FD76F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gh||github</string>
+			<key>text</key>
+			<string>Search GitHub for '{query}'</string>
+			<key>url</key>
+			<string>https://github.com/search?q={query}&amp;type=repositories</string>
+		</dict>
+		<key>101C102A-5154-41EC-B0E1-8D22CE169C0F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>reddit||rdd</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Search Reddit for '{query}'</string>
+			<key>url</key>
+			<string>https://www.google.com/search?q=reddit+{query}</string>
+		</dict>
+	</dict>
+	<key>onlyShowEnabledInPrefs</key>
+	<true/>
+</dict>
+</plist>
