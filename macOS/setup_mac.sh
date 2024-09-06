@@ -845,6 +845,10 @@ echo "Tell ProtonVPN to start on boot, minimized"
 defaults write ch.protonvpn.mac StartOnBoot -bool true
 defaults write ch.protonvpn.mac StartMinimized -bool true
 
+echo "Turn off improper-eject notification"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.DiskArbitration.diskarbitrationd.plist DADisableEjectNotification -bool true
+sudo pkill diskarbitrationd
+
 echo "Set lock screen text"
 [ -n "$(defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText 2>/dev/null)" ] || \
   defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "Found this computer? Please contact $DEVICE_OWNER at $DEVICE_OWNER_EMAIL"
