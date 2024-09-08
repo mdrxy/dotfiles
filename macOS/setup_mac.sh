@@ -2,8 +2,13 @@
 
 # Written for Apple Silicone Macs running macOS Sonoma
 
+BREWFILE_PATH=""
 SYS_USERNAME=""
+
+# {FirstName} {LastName}
 DEVICE_OWNER=""
+
+# {Email}
 DEVICE_OWNER_EMAIL=""
 
 # Directory where iTerm2 will look for preferences
@@ -62,7 +67,7 @@ xcode-select --install
 sudo xcodebuild -license accept
 
 echo "Clearing existing .DS_Store files..."
-sudo find / -name ".DS_Store" -print -delete
+sudo find / -name ".DS_Store" -print -delete &
 
 # Loop until the tools are successfully installed and the license is accepted
 while :
@@ -85,19 +90,22 @@ do
     fi
 done
 
-echo "Set up .nanorc..."
-echo 'set linenumbers' >> "/Users/$SYS_USERNAME/.nanorc"
-echo 'include "'"$(brew --cellar nano)"'/*/share/nano/*.nanorc"' >> "/Users/$SYS_USERNAME/.nanorc"
-
 echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if ! command -v brew &> /dev/null; then
+    echo "Homebrew not found. Installing Homebrew..."
+    /bin/bash -c "$(curl -fSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    echo "Homebrew is already installed."
+fi
 
 echo "Disabling Homebrew telemetry..."
 brew analytics off
 
 echo "Install Homebrew packages/casks/etc."
-brew bundle install -v --file=../Homebrew/Brewfile
+brew bundle install -v --file=$BREWFILE_PATH
+
+sleep 3
 
 echo "Make Homebrew's version of zsh the default shell"
 # Append brew's zsh install to the list of acceptable shells for chpass(1)
@@ -106,6 +114,8 @@ if ! fgrep -q '/opt/homebrew/bin/zsh' /etc/shells; then
 fi
 # Change default shell to brew's zsh
 chsh -s /opt/homebrew/bin/zsh
+
+sleep 3
 
 ZDOTDIR=~/.config/zsh
 git clone https://github.com/mdrxy/zdotdir $ZDOTDIR
@@ -116,7 +126,8 @@ ln -s $ZDOTDIR/.zshenv ~/.zshenv
 
 # install omz
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-ZSH="$ZDOTDIR/omz" install.sh
+ZSH="$ZDOTDIR/omz" sh install.sh
+# Running install.sh with this ZSH environment variable tells the script to install Oh My Zsh into the directory "$ZDOTDIR/omz" rather than the default location (~/.oh-my-zsh).
 
 # Terminal needs to be restarted to launch from new zsh, but not necessary for the remainder of this script
 
@@ -129,6 +140,11 @@ echo "2..."
 sleep 1
 echo "1..."
 sleep 1
+
+echo "Set up .nanorc..."
+rm -rf "/Users/$SYS_USERNAME/.nanorc"
+echo 'set linenumbers' >> "/Users/$SYS_USERNAME/.nanorc"
+echo 'include "'"$(brew --cellar nano)"'/opt/homebrew/Cellar/nano/*/share/nano/*.nanorc"' >> "/Users/$SYS_USERNAME/.nanorc"
 
 ################################################################################
 # Privacy
