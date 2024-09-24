@@ -332,6 +332,14 @@ defaults write com.apple.dock minimize-to-application -bool true
 echo "Click Wallpaper to reveal Desktop > Only in Stage Manager"
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
+echo "Disable gaps when snapping window"
+defaults write com.apple.WindowManager AppWindowGroupingBehavior -int 1
+defaults write com.apple.WindowManager AutoHide -bool false
+defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
+defaults write com.apple.WindowManager HideDesktop -bool true
+defaults write com.apple.WindowManager StageManagerHideWidgets -bool false
+defaults write com.apple.WindowManager StandardHideWidgets -bool false
+
 echo "Disable automatically rearranging Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
