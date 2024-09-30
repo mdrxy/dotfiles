@@ -859,6 +859,13 @@ echo "Disable participation in Siri data collection"
 defaults write com.apple.assistant.support 'Siri Data Sharing Opt-In Status' -int 2
 
 ################################################################################
+# Zoom
+################################################################################
+
+echo "Disable screen recording prompt that appears each month"
+defaults write ~/Library/Group\ Containers/group.com.apple.replayd/ScreenCaptureApprovals.plist "/Applications/zoom.us.app/Contents/MacOS/zoom.us" -date "3024-09-21 12:40:36 +0000"
+
+################################################################################
 # Finalize
 ################################################################################
 
