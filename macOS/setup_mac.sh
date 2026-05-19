@@ -1185,5 +1185,6 @@ mkdir ~/.config/git
 mv ~/.gitconfig ~/.config/git/config
 cp gitignore ~/.config/git/gitignore
 git config --global core.excludesfile ~/.config/git/gitignore
+git config --global fetch.prune true
 '''
 EOF
